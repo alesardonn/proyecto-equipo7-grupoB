@@ -17,6 +17,8 @@
                 <li><a href="#recursos">Recursos</a></li>
                 <li><a href="#red-apoyo">Red de Apoyo</a></li>
                 <li><a href="#calculadora">Calculadora</a></li>
+                <li><a href="#faqs">FAQs</a></li>
+                <li><a href="#newsletter">Newsletter</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
@@ -35,8 +37,24 @@
 
     <section id="testimonios" class="card">
         <h2>🗣 Testimonios</h2>
-        <p>"Nunca pensé que un buen CV me abriría tantas puertas" - María, 23 años.</p>
-        <p>"Gracias a un mentor logré mi primer trabajo formal" - Juan, 25 años.</p>
+        <div class="testimonios-grid">
+            <div class="testimonio-card">
+                <div class="quote">Nunca pensé que un buen CV me abriría tantas puertas. Después de seguir los consejos de esta plataforma, conseguí tres entrevistas en una semana.</div>
+                <div class="author">- María, 23 años 👩‍💼</div>
+            </div>
+            <div class="testimonio-card">
+                <div class="quote">Gracias a un mentor logré mi primer trabajo formal. El apoyo y la guía fueron fundamentales para mi desarrollo profesional.</div>
+                <div class="author">- Juan, 25 años 👨‍💻</div>
+            </div>
+            <div class="testimonio-card">
+                <div class="quote">La calculadora de empleabilidad me ayudó a identificar mis puntos débiles y enfocarme en mejorar mis habilidades digitales.</div>
+                <div class="author">- Sofia, 22 años 🎯</div>
+            </div>
+            <div class="testimonio-card">
+                <div class="quote">Los recursos y tips para entrevistas me dieron la confianza que necesitaba. Ahora trabajo en una startup tecnológica.</div>
+                <div class="author">- Diego, 26 años 🚀</div>
+            </div>
+        </div>
     </section>
 
     <section id="recursos" class="card">
@@ -88,6 +106,65 @@
         <div id="resultadoCalculo"></div>
     </section>
 
+    <section id="faqs" class="card">
+        <h2>❓ Preguntas Frecuentes</h2>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                ¿Cómo puedo mejorar mi CV si no tengo experiencia laboral?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                Enfócate en tus estudios, proyectos académicos, voluntariados, cursos online y habilidades técnicas. También puedes incluir trabajos de medio tiempo, prácticas no remuneradas o proyectos personales que demuestren tus capacidades.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                ¿Qué habilidades digitales son más valoradas en 2025?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                Las más demandadas incluyen: manejo de redes sociales, análisis de datos básico, herramientas de Microsoft Office/Google Workspace, programación básica, marketing digital, y competencias en inteligencia artificial y automatización.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                ¿Cómo me conecto con un mentor a través de esta plataforma?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                Completa el formulario en la sección "Red de Apoyo" con información detallada sobre tu perfil y objetivos. Nuestro equipo te conectará con un mentor adecuado según tu área de interés y experiencia en un plazo de 48-72 horas.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                ¿Es gratuito el uso de esta plataforma?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                Sí, todos nuestros recursos básicos son completamente gratuitos. Esto incluye la calculadora de empleabilidad, recursos descargables, conexión con mentores básica y acceso a la comunidad. Es nuestro compromiso social con los jóvenes argentinos.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                ¿Qué debo hacer si no encuentro trabajo después de 6 meses buscando?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                No te desanimes. Considera actualizar tu estrategia: revisa tu CV, practica entrevistas, amplía tu red de contactos, considera trabajos temporales para ganar experiencia, y evalúa si necesitas desarrollar nuevas habilidades específicas del mercado actual.
+            </div>
+        </div>
+    </section>
+
+    <section id="newsletter" class="card newsletter">
+        <h2>📧 Newsletter Semanal</h2>
+        <p>Recibe las últimas oportunidades laborales, tips de empleabilidad y noticias del mercado laboral juvenil directamente en tu email.</p>
+        <div style="margin-top: 20px;">
+            <input type="email" id="emailNewsletter" placeholder="tu@email.com">
+            <button onclick="suscribirNewsletter()">Suscribirme 📩</button>
+        </div>
+        <p style="font-size: 0.9rem; margin-top: 15px; opacity: 0.9;">🔒 Tu privacidad es importante. No compartimos tu información con terceros.</p>
+    </section>
+
     <section id="galeria" class="card">
         <h2>📸 Comunidad Activa</h2>
         <img src="imagenes/coworking.jpg" alt="Espacio coworking" width="300">
@@ -102,4 +179,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-  

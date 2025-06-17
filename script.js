@@ -52,3 +52,40 @@ document.getElementById("formularioApoyo").addEventListener("submit", function(e
     e.preventDefault();
     alert("✅ Gracias por enviar tu solicitud. Un mentor se pondrá en contacto contigo pronto.");
 });
+
+// Toggle para FAQs
+function toggleFAQ(element) {
+    const answer = element.nextElementSibling;
+    const toggle = element.querySelector('.faq-toggle');
+    
+    if (answer.classList.contains('active')) {
+        answer.classList.remove('active');
+        toggle.classList.remove('rotated');
+        toggle.textContent = '+';
+    } else {
+        // Cerrar todas las otras FAQs
+        document.querySelectorAll('.faq-answer.active').forEach(item => {
+            item.classList.remove('active');
+        });
+        document.querySelectorAll('.faq-toggle.rotated').forEach(item => {
+            item.classList.remove('rotated');
+            item.textContent = '+';
+        });
+        
+        // Abrir la FAQ actual
+        answer.classList.add('active');
+        toggle.classList.add('rotated');
+        toggle.textContent = '×';
+    }
+}
+
+// Suscripción al newsletter
+function suscribirNewsletter() {
+    const email = document.getElementById("emailNewsletter").value;
+    if (email && email.includes('@')) {
+        alert("🎉 ¡Suscripción confirmada exitosamente! Recibirás nuestro newsletter semanal en " + email);
+        document.getElementById("emailNewsletter").value = '';
+    } else {
+        alert("⚠️ Por favor, ingresa un email válido.");
+    }
+}
