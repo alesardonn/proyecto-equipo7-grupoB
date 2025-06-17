@@ -1,0 +1,134 @@
+/* Archivo: styles.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+:root {
+    --rosa: #D73C64;
+    --violeta: #A4DBE3;
+    --celeste: #1E9CCA;
+    --lavanda: #78CBC6;
+    --azul-oscuro: #03161F;
+    --fondo-claro: #F7F8FA;
+    --sombra: rgba(0, 0, 0, 0.1);
+    --borde: #E0E0E0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: var(--fondo-claro);
+    color: var(--azul-oscuro);
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(to right, var(--rosa), var(--lavanda));
+    padding: 20px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 8px var(--sombra);
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--violeta);
+}
+
+.hero {
+    padding: 40px 20px;
+    text-align: center;
+    background: linear-gradient(to right, var(--violeta), var(--lavanda));
+    color: white;
+}
+
+section.card {
+    background: white;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px var(--sombra);
+    max-width: 900px;
+}
+
+section.card h2 {
+    color: var(--rosa);
+    margin-bottom: 15px;
+}
+
+button {
+    background: var(--rosa);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: var(--lavanda);
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--azul-oscuro);
+    color: white;
+    margin-top: 50px;
+}
+
+img {
+    border-radius: 10px;
+    margin: 10px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    img {
+        width: 90%;
+    }
+}
